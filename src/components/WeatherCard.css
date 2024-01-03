@@ -1,0 +1,187 @@
+/* WeatherCard.css */
+
+.weather-card-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Agrega los estilos para cada fondo según el clima */
+.weather-card-container {
+  &.soleado-background-day {
+    background-image: url('/soleado.webp');
+  }
+  
+  &.soleado-background-night {
+    background-image: url('/nochedespejada.jpg');
+  }
+  
+  &.nublado-background-day {
+    background-image: url('/nubladodia.jpg');
+  }
+  
+  &.nublado-background-night {
+    background-image: url('/nubladonoche.jpg');
+  }
+  
+  &.lluvioso-background-day {
+    background-image: url('/lluviosodia.jpg');
+  }
+  
+  &.lluvioso-background-night {
+    background-image: url('/lluviosonoche.jpg');
+  }
+  
+  &.nevado-background-day {
+    background-image: url('/nevadodia.jpg');
+  }
+  
+  &.nevado-background-night {
+    background-image: url('/nevadonoche.jpg');
+  }
+  
+  &.calido-background-day {
+    background-image: url('/calidodia.jpg');
+  }
+  
+  &.calido-background-night {
+    background-image: url('/calidonoche.jpeg');
+  }
+  
+  &.tiempo-background-day {
+    background-image: url('/tiempodia.jpg');
+  }
+  
+  &.tiempo-background-night {
+    background-image: url('/tiemponoche.jpg');
+  }
+}
+
+.weather-card {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.weather-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.location {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.weather-description {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.weather-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detail-name {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.temperature-footer {
+  margin-top: 20px;
+}
+
+.temperature {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333; /* Color de la temperatura */
+}
+
+.temperature-button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.temperature-button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos adicionales para hacer el diseño más interactivo y agradable */
+input,
+button {
+  transition: background-color 0.3s ease;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Media query para hacer el diseño más responsive */
+@media only screen and (min-width: 600px) {
+  .weather-card {
+    width: 400px;
+  }
+
+  .weather-info {
+    flex-direction: row;
+  }
+
+  .weather-icon {
+    width: 100px;
+    height: 100px;
+  }
+}
